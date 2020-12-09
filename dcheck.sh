@@ -5,7 +5,7 @@ if [ "$#" == "0" ]; then
     exit 1
 fi 
  
-DOMAINS=( '.com' '.de' '.co.uk' '.fr' '.es' '.it' '.nl' '.se' )
+DOMAINS=( '.com' '.de' '.co.uk' )
 
 ELEMENTS=${#DOMAINS[@]} 
  
@@ -19,5 +19,7 @@ while (( "$#" )); do
 	      echo -e "\e[31m$1${DOMAINS[${i}]} : not available"  
 	  fi 
   done 
+
+shift
 
 done
